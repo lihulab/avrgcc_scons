@@ -1,5 +1,6 @@
 # Object files
 *.o
+*.d
 
 # Libraries
 *.lib
@@ -15,3 +16,13 @@
 *.exe
 *.out
 *.app
+
+# Project files
+*.aps
+*.aws
+
+# Output files
+*.eep
+*.elf
+*.hex
+
