@@ -26,4 +26,4 @@ AFLAGS = '-c' + DEVICE
 LFLAGS = DEVICE + ' -Wl,--gc-sections,-Map=' + TARGET_NAME + '.map,-cref '
 
 HEXFILE = TARGET_NAME + '.hex'
-POST_ACTION = OBJCOPY + ' -O ihex $TARGET $HEXFILE '
+POST_ACTION = OBJCOPY + ' -O ihex $TARGET ' + HEXFILE
