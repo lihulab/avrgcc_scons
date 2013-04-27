@@ -25,4 +25,8 @@
 *.eep
 *.elf
 *.hex
+*.map
 
+# scons & python file
+*.pyc
+*.dblite
