@@ -1,0 +1,22 @@
+import os
+import sys
+import avrconfig
+from building import *
+
+env = Environment(tool = ['winavr'],
+    AS = avrconfig.AS, ASFLAGS = avrconfig.AFLAGS,
+	CC = avrconfig.CC, CCFLAGS = avrconfig.CFLAGS,
+	AR = avrconfig.AR, ARFLAGS = '-rc',
+	LINK = avrconfig.LINK, LINKFLAGS = avrconfig.LFLAGS)
+env.PrependENVPath('PATH', avrconfig.EXEC_PATH)    
+
+Export('avrconfig')
+
+objs = PrepareBuilding(env, ' ', has_libcpu=False)
+
+
+
+
+env.Program(avrconfig.TARGET, objs)
+
+EndBuilding(avrconfig.TARGET)
